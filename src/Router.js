@@ -6,6 +6,9 @@ import Home from "./components/Home"
 import Register from "./components/Auth/Register"
 import Login from "./components/Auth/Login"
 
+import Profile from "./components/User/Profile"
+import EditProfile from "./components/User/EditProfile"
+
 import Blogs from "./components/Blogs"
 import CreateBlog from "./components/Blogs/Create"
 import SingleBlog from "./components/Blogs/SingleBlog"
@@ -18,35 +21,43 @@ import SingleMerch from "./components/Merch(es)/SingleMerch"
 import EditMerch from "./components/Merch(es)/SingleMerch/Edit"
 import DeleteMerch from "./components/Merch(es)/SingleMerch/Delete"
 
+import UserState from "./context/User/UserState"
+
+import Auth from "./routes/Auth"
+import Private from "./routes/Private"
+
+
 
 const Router = () => {
     return (
         <>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Layout />} >
-                        <Route index element={<Home />} />
+            <UserState>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Layout />} >
+                            <Route index element={<Auth component={Home} />} />
 
-                        <Route path="registro" element={<Register />} />
+                            <Route path="registro" element={<Auth component={Register} />} />
+                            <Route path="login" element={<Auth component={Login} />} />
 
-                        <Route path="iniciar-sesion" element={<Login />} />
+                            <Route path="profile" element={<Private component={Profile} />} />
+                            <Route path="editprofile/:id" element={<EditProfile />} />
 
-                        {/* <Route path="profile" element={<Private component={Profile} />} /> */}
+                            <Route path="blogs" element={<Blogs />} />
+                            <Route path="blogs/create" element={<CreateBlog />} />
+                            <Route path="blogs/:id" element={<SingleBlog />} />
+                            <Route path="blogs/:id/edit" element={<EditBlog />} />
+                            <Route path="blogs/:id/delete" element={<DeleteBlog />} />
 
-                        <Route path="blogs" element={<Blogs />} />
-                        <Route path="blogs/create" element={<CreateBlog />} />
-                        <Route path="blogs/:id" element={<SingleBlog />} />
-                        <Route path="blogs/:id/edit" element={<EditBlog />} />
-                        <Route path="blogs/:id/delete" element={<DeleteBlog />} />
-
-                        <Route path="merch" element={<Merch />} />
-                        <Route path="merch/create" element={<CreateMerch />} />
-                        <Route path="merch/:id" element={<SingleMerch />} />
-                        <Route path="merch/:id/edit" element={<EditMerch />} />
-                        <Route path="merch/:id/delete" element={<DeleteMerch />} /> 
-                    </Route>
-                </Routes>
-            </BrowserRouter>
+                            <Route path="merch" element={<Merch />} />
+                            <Route path="merch/create" element={<CreateMerch />} />
+                            <Route path="merch/:id" element={<SingleMerch />} />
+                            <Route path="merch/:id/edit" element={<EditMerch />} />
+                            <Route path="merch/:id/delete" element={<DeleteMerch />} />
+                        </Route>
+                    </Routes>
+                </BrowserRouter>
+            </UserState>
         </>
     )
 }
