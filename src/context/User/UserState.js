@@ -27,6 +27,7 @@ const UserState = (props) => {
 
     const registerUser = async (form) => {
         const res = await axiosClient.post("users/signup", form)
+        console.log(form)
         const token = res.data.data
         const msg = res.data.msg
 
