@@ -34,6 +34,7 @@ const Router = () => {
             <UserState>
                 <BrowserRouter>
                     <Routes>
+
                         <Route path="/" element={<Layout />} >
                             <Route index element={<Auth component={Home} />} />
 

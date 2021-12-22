@@ -43,7 +43,7 @@ const EditProfile = () =>  {
     
         setUserData({
           ...userData,
-          [e.target.nombre]: e.target.value,
+          [e.target.name]: e.target.value,
         });
       };
     

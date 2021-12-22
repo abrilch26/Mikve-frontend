@@ -12,11 +12,11 @@ export default function Layout() {
 
                 <Header />
 
-                <main class="mb-auto">
+                
                     <Outlet />
-                </main>
+                
 
-                <Footer />
+               <Footer />
 
             </div>
         </div>
