@@ -62,7 +62,7 @@ const Register = () => {
                                 </div>
 
                                 <div>
-                                    <label for="apellido" className="block text-xs  font-mono font-medium text-yellow-50 opacity-90">
+                                    <label for="apellido" className="block text-xs  font-mono font-medium text-yellow-50 opacity-90 ">
                                         Tus Apellidos ⬇️
                                     </label>
                                     <div className="mt-1">

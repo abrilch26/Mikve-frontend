@@ -17,13 +17,13 @@ const SingleMerch = () => {
 
     return (
         <>
-        <div className="bg-white">
+        <div className="bg-neutral-900">
           <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
             {/* Product details */}
             <div className="lg:max-w-lg lg:self-end">
 
               <div className="mt-4">
-                <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{singleProduct.productName}</h1>
+                <h1 className="text-3xl font-mono font-extrabold tracking-tight text-violet-400 sm:text-4xl">{singleProduct.productName}</h1>
               </div>
     
               <section aria-labelledby="information-heading" className="mt-4">
@@ -32,11 +32,22 @@ const SingleMerch = () => {
                 </h2>
     
                 <div className="flex items-center">
-                  <p className="text-lg text-gray-900 sm:text-xl"> {singleProduct.price} </p>
+                  <p className="text-lg text-emerald-500 font-mono sm:text-xl mb-10"> ${singleProduct.price}.00 MXN </p>
                 </div>
     
                 <div className="mt-4 space-y-6">
-                  <p className="text-base text-gray-500">{singleProduct.description}</p>
+                  <p className="text-base  text-yellow-50 opacity-90 font-mono">Descripción: {singleProduct.description}</p>
+                </div>
+
+                <div className="mt-4 space-y-6">
+                  <p className="text-base  text-yellow-50 opacity-90 font-mono">Detalles: {singleProduct.details}</p>
+                </div>
+
+                <div className="mt-4 space-y-6">
+                  <p className="text-base  text-yellow-50 opacity-90 font-mono">Color: {singleProduct.color}</p>
+                </div>
+                <div className="mt-4 space-y-6">
+                  <p className="text-base  text-yellow-50 opacity-90 font-mono">Talla: {singleProduct.size}</p>
                 </div>
     
               </section>
@@ -62,9 +73,9 @@ const SingleMerch = () => {
                   <div className="mt-10">
                     <button
                       type="submit"
-                      className="w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
+                      className="w-full bg-emerald-500 font-mono border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
                     >
-                      Add to bag
+                      Comprar
                     </button>
                   </div>
                   </div>
