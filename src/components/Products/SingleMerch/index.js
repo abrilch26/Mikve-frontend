@@ -57,6 +57,18 @@ const SingleMerch = () => {
             <div className="mt-10 lg:mt-0 lg:col-start-2 lg:row-span-2 lg:self-center">
               <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
                 <img src={singleProduct.image} alt="" className="w-full h-full object-center object-cover" />
+
+
+				<div className="mt-4 flex-end  md:mt-4">
+                <Link to={`/merch/${id}/edit`}>
+						<button
+						  type="button"
+						  className="flex-end ml-3 mb-3 items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium font-mono text-white bg-violet-400 hover:bg-violet-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+						>
+						  Editar 
+						</button>
+					  </Link>
+                      </div>
               </div>
             </div>
     
