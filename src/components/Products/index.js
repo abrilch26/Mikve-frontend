@@ -1,6 +1,6 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react"
 import MerchContext from "../../context/Merch/MerchContext"
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 const Products = () => {
   const ctx = useContext(MerchContext)
@@ -31,14 +31,14 @@ const Products = () => {
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm font-mono text-emerald-500">
-                  <Link to={`/merch/${products._id}`} key={products._id} >
+                  <Link to={`/merch/readone/${products._id}`} key={products._id} >
                       <span aria-hidden="true" className="absolute inset-0" />
                       </Link>
                       {products.productName}
                   </h3>
-                  <p className="mt-1 text-sm font-mono text-yellow-50 opacity-90">{products.color}</p>
+                  <p className="mt-1 text-xs font-mono text-yellow-50 opacity-90">{products.color}</p>
                 </div>
-                <p className="text-sm font-medium font-mono text-yellow-50 opacity-90"> ${products.price}</p>
+                <p className="text-xs font-mono text-yellow-50 opacity-90"> ${products.price}</p>
               </div>
             </div>
           ))}

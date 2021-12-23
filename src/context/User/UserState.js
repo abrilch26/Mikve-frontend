@@ -12,7 +12,7 @@ const UserState = (props) => {
             telefono: "",
             pais: "",
             email: "",
-            userImage: "",
+            userImage: "https://i.ibb.co/nBTRnsc/gamer.jpg",
             bio: "",
             password: "",
             purchasedProducts: []

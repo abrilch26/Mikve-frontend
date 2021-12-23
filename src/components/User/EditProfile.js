@@ -63,10 +63,10 @@ const EditProfile = () =>  {
               <div className="flex items-center space-x-5">
                 <div className="flex-shrink-0">
                   <div className="relative">
-                    {currentUser.image ? (
+                    {currentUser.userImage ? (
                       <img
                         className="h-16 w-16 rounded-full"
-                        src={currentUser.image}
+                        src={currentUser.userImage}
                         alt=""
                       />
                     ) : (
@@ -91,10 +91,10 @@ const EditProfile = () =>  {
                 </div>
                 <div>
                   <h1 className="text-2xl font-bold text-gray-900">
-                    {currentUser.name}
+                    {currentUser.nombre}
                   </h1>
                   <p className="text-sm font-medium text-gray-500">
-                    Rol: {currentUser.role}
+                    Apellido {currentUser.apellido}
                   </p>
                 </div>
               </div>

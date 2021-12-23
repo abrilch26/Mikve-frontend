@@ -10,7 +10,8 @@ const Register = () => {
         nombre: "",
         apellido: "",
         email: "",
-        password: ""
+        password: "",
+        userImage: "https://i.ibb.co/nBTRnsc/gamer.jpg"
     })
 
     const handleChange = (e) => {
