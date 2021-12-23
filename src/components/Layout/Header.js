@@ -20,30 +20,30 @@ export default function Header() {
   const [isOpen, setisOpen] = useState(false)
 
     return (
-<header className="bg-emerald-300">
+<header className="bg-indigo-600">
   <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
     <div className="w-full py-6 flex items-center justify-between border-b border-indigo-500 lg:border-none">
       <div className="flex items-center">
 
       <Link to="/">
           <span className="sr-only">Workflow</span>
-          <img className="h-6 w-auto mb-1" src="https://i.ibb.co/SRTvSyC/logob-w-11.png" alt="mikve full logo" />
+          <img className="h-6 w-auto mb-1" src="https://i.ibb.co/r3phT9r/logob-w-12.png" alt="mikve full logo" />
         </Link>
 
         <div className="hidden ml-10 space-x-8 lg:block">
-        <Link to="/merch" className="font-mono text-sm text-neutral-900 hover:text-indigo-50" key="Merch">
+        <Link to="/merch" className="font-mono text-sm text-white hover:text-indigo-50" key="Merch">
             Merch
           </Link>
 
-          {/* <Link to="/blogs" className="font-mono  text-sm text-neutral-900 hover:text-indigo-50" key="Blog">
+          {/* <Link to="/blogs" className="font-mono  text-sm text-white hover:text-indigo-50" key="Blog">
             Blog
           </Link> */}
 
-          <Link to="/about-us" className="font-mono  text-sm text-neutral-900 hover:text-indigo-50" key="Sobre Nosotras">
+          <Link to="/about-us" className="font-mono  text-sm text-white hover:text-indigo-50" key="Sobre Nosotras">
             Sobre nosotras
           </Link>
 
-          <a onClick={() => logoutUser()} href="/" className="font-mono  text-sm text-neutral-900 hover:text-indigo-50">Cerrar sesión</a>
+          <a onClick={() => logoutUser()} href="/" className="font-mono  text-sm text-white hover:text-indigo-50">Cerrar sesión</a>
         </div>
       </div>
       
@@ -65,6 +65,8 @@ export default function Header() {
           <Link to="/about-us" className="font-mono  text-sm text-white hover:text-indigo-50" key="Sobre Nosotras">
             Sobre nosotras
           </Link>
+          <a onClick={() => logoutUser()} href="/" className="font-mono  text-sm text-white hover:text-indigo-50">Cerrar sesión</a>
+
 
     </div>
   </nav>

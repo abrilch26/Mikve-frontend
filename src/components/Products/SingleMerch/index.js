@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom"
 
 const SingleMerch = () => {
     const ctx = useContext(MerchContext)
-    const { oneProduct, getProduct, deleteProduct} = ctx
+    const { singleProduct, getProduct, deleteProduct} = ctx
 
     const params = useParams()
     const id = params.id
@@ -23,7 +23,7 @@ const SingleMerch = () => {
             <div className="lg:max-w-lg lg:self-end">
 
               <div className="mt-4">
-                <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{oneProduct.productName}</h1>
+                <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{singleProduct.productName}</h1>
               </div>
     
               <section aria-labelledby="information-heading" className="mt-4">
@@ -32,11 +32,11 @@ const SingleMerch = () => {
                 </h2>
     
                 <div className="flex items-center">
-                  <p className="text-lg text-gray-900 sm:text-xl"> {oneProduct.price} </p>
+                  <p className="text-lg text-gray-900 sm:text-xl"> {singleProduct.price} </p>
                 </div>
     
                 <div className="mt-4 space-y-6">
-                  <p className="text-base text-gray-500">{oneProduct.description}</p>
+                  <p className="text-base text-gray-500">{singleProduct.description}</p>
                 </div>
     
               </section>
@@ -45,7 +45,7 @@ const SingleMerch = () => {
             {/* oneProduct image */}
             <div className="mt-10 lg:mt-0 lg:col-start-2 lg:row-span-2 lg:self-center">
               <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
-                <img src={oneProduct.image} alt="" className="w-full h-full object-center object-cover" />
+                <img src={singleProduct.image} alt="" className="w-full h-full object-center object-cover" />
               </div>
             </div>
     
