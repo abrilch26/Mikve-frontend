@@ -8,7 +8,7 @@ import Footer from "./Footer"
 export default function Layout() {
     return (
         <div>
-            <div class="flex flex-col h-screen justify-between">
+            <div className="flex flex-col h-screen">
 
                 <Header />
 

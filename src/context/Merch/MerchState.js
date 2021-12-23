@@ -70,6 +70,7 @@ const MerchState = (props) => {
         value ={{
             products: globalState.products,
             singleProduct: globalState.singleProduct,
+            createProduct,
             getProducts,
             getProduct,
             editProduct,

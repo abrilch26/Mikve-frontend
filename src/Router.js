@@ -15,13 +15,14 @@ import SingleBlog from "./components/Blogs/SingleBlog"
 import EditBlog from "./components/Blogs/SingleBlog/Edit"
 import DeleteBlog from "./components/Blogs/SingleBlog/Delete"
 
-import Merch from "./components/Merch(es)"
-import CreateMerch from "./components/Merch(es)/Create"
-import SingleMerch from "./components/Merch(es)/SingleMerch"
-import EditMerch from "./components/Merch(es)/SingleMerch/Edit"
-import DeleteMerch from "./components/Merch(es)/SingleMerch/Delete"
+import Merch from "./components/Products"
+import CreateMerch from "./components/Products/Create"
+import SingleMerch from "./components/Products/SingleMerch"
+import EditMerch from "./components/Products/SingleMerch/Edit"
+import DeleteMerch from "./components/Products/SingleMerch/Delete"
 
 import UserState from "./context/User/UserState"
+import MerchState from "./context/Merch/MerchState"
 
 import Auth from "./routes/Auth"
 import Private from "./routes/Private"
@@ -32,6 +33,7 @@ const Router = () => {
     return (
         <>
             <UserState>
+            <MerchState>
                 <BrowserRouter>
                     <Routes>
 
@@ -58,6 +60,7 @@ const Router = () => {
                         </Route>
                     </Routes>
                 </BrowserRouter>
+                </MerchState>
             </UserState>
         </>
     )
