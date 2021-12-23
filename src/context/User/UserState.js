@@ -48,13 +48,22 @@ const UserState = (props) => {
     const loginUser = async (form) => {
         const res = await axiosClient.post("users/login", form)
         const token = res.data.data
+        const msg = res.data.msg
 
-        dispatch({
-            type: "LOGIN_SUCCEED",
-            payload: token
-        })
+        if(msg) {
+            dispatch({
+                type: "LOGIN_FAIL",
+                payload: msg
+            })
+        } else {
+            dispatch({
+                type: "LOGIN_SUCCEED",
+                payload: token
+            })
+        }
     }
 
+    
     const verifyingToken = async () => {
         const token = localStorage.getItem("token")
         //anexar token a la peticion de axios
@@ -87,8 +96,14 @@ const UserState = (props) => {
 
 
     const editProfile = async (form, idUser) => {
-        const res = await axiosClient.put(`users/editprofile/${idUser}`, form);
+        const res = await axiosClient.put(`users/editprofile/${idUser}`, form)
+        const updatedUser = res.data.data
+        dispatch ({
+            type: "UPDATE_PROFILE",
+            payload: updatedUser
+        });
     };
+
 
     return (
         <UserContext.Provider
